@@ -118,7 +118,9 @@ def main():
 
     elif args.mode == 'Test':
         ''' Instead if we want to test the model'''
-        pass
+        print('Testing the model')
+        model, _ = load_checkpoint(model, modelpath)
+        test(args, model, test_loader, criterion, writer, epoch=0)
 
     else:
         ''' We can implement some visualization mode to generate plots'''
