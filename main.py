@@ -99,6 +99,8 @@ def main():
         ''' We can resume training from where we left off '''
         if args.resume == True:
             model, start_epoch = load_checkpoint(model, modelpath)
+            print('here')
+
 
         ''' Now that we have defined everything, we can start actual training. We train for args.epoch number of epochs'''
         for epoch in range(start_epoch, args.epochs + 1):
